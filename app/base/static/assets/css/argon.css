@@ -21112,6 +21112,7 @@ textarea[resize='horizontal']
         transform: translate(0, 0);
         animation: none; 
         pointer-events: auto;
+        z-index: 1000;
 
         opacity: 1;
     }
@@ -21417,6 +21418,7 @@ textarea[resize='horizontal']
 }
 .navbar-vertical .navbar-nav
 {
+
     margin-right: -1rem; 
     margin-left: -1rem;
 }
@@ -22197,7 +22199,7 @@ textarea[resize='horizontal']
 
 .sidenav
 {
-    z-index: 1050;
+    z-index: 990;
 
     transition: all .4s ease;
 }
@@ -22210,6 +22212,7 @@ textarea[resize='horizontal']
     .sidenav .sidenav-toggler
     {
         padding: 1.5rem;
+        z-index: 1000;
     }
 }
 .sidenav .navbar-brand,
@@ -22221,7 +22224,7 @@ textarea[resize='horizontal']
 .sidenav-header
 {
     height: 78px;
-
+    z-index: 1080;
     text-align: center;
 }
 
@@ -29837,4 +29840,12 @@ input.datetimepicker[data-color='yellow'] + .bootstrap-datetimepicker-widget.dro
 .bootstrap-datetimepicker-widget.dropdown-black table td .btn[data-action='togglePeriod']
 {
     background: transparent;
+}
+
+#sidenav-collapse-main{
+    z-index: 100;
+}
+
+#profile-icon-main{
+    z-index: 1000;
 }

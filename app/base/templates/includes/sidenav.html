@@ -1,10 +1,37 @@
 <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
   <div class="scrollbar-inner">
     <!-- Brand -->
-    <div class="sidenav-header  align-items-center">
-      <a class="navbar-brand" href="/">
-        <img src="/static/assets/img/brand/blue.png" class="navbar-brand-img" alt="Argon Dashboard - Flask Template Logo.">
-      </a>
+    <div class="sidenav-header d-flex justify-content-left" id="profile-icon-main">
+      <ul class="navbar-nav align-items-center  ml-auto ml-md-0 ">
+        <li class="nav-item dropdown">
+          <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="media align-items-center">
+              <span class="avatar avatar-sm rounded-circle">
+                <img alt="Image placeholder" src="/static/assets/img/theme/team-4.jpg">
+              </span>
+              <div class="media-body  ml-2  d-none d-lg-block">
+                <span class="mb-0 text-sm  font-weight-bold">
+                  {{ current_user.username }}
+                </span>
+              </div>
+            </div>
+          </a>
+          <div class="dropdown-menu  dropdown-menu-right ">
+            <div class="dropdown-header noti-title">
+              <h6 class="text-overflow m-0">Welcome!</h6>
+            </div>
+            <a href="/profile.html" class="dropdown-item">
+              <i class="ni ni-single-02"></i>
+              <span>My profile</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="{{ url_for('base_blueprint.logout') }}" class="dropdown-item">
+              <i class="ni ni-user-run"></i>
+              <span>Logout</span>
+            </a>
+          </div>
+        </li>
+      </ul>
     </div>
     <div class="navbar-inner">
       <!-- Collapse -->
@@ -14,43 +41,38 @@
           <li class="nav-item">
             <a class="nav-link {% if 'index' in segment %} active {% endif %}" href="/">
               <i class="ni ni-tv-2 text-primary"></i>
-              <span class="nav-link-text">Dashboard</span>
+              <span class="nav-link-text">Beispiel Dashboard</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link {% if 'icons' in segment %} active {% endif %}" href="/icons.html">
               <i class="ni ni-planet text-orange"></i>
-              <span class="nav-link-text">Icons</span>
+              <span class="nav-link-text">Beispiel Symbole</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link {% if 'map' in segment %} active {% endif %}" href="/map.html">
-              <i class="ni ni-pin-3 text-primary"></i>
-              <span class="nav-link-text">Google</span>
-            </a>
           </li>
           <li class="nav-item">
             <a class="nav-link {% if 'profile' in segment %} active {% endif %}" href="/profile.html">
               <i class="ni ni-single-02 text-yellow"></i>
-              <span class="nav-link-text">Profile</span>
+              <span class="nav-link-text">Beispiel Profil</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link {% if 'tables' in segment %} active {% endif %}" href="/tables.html">
               <i class="ni ni-bullet-list-67 text-default"></i>
-              <span class="nav-link-text">Tables</span>
+              <span class="nav-link-text">Beispiel Tabellen</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/login.html">
               <i class="ni ni-key-25 text-info"></i>
-              <span class="nav-link-text">Login</span>
+              <span class="nav-link-text">Beispiel Login</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/register.html">
               <i class="ni ni-circle-08 text-pink"></i>
-              <span class="nav-link-text">Register</span>
+              <span class="nav-link-text">Beispiel Register</span>
             </a>
           </li>
           <li class="nav-item">
@@ -64,18 +86,18 @@
         <hr class="my-3">
         <!-- Heading -->
         <h6 class="navbar-heading p-0 text-muted">
-          <span class="docs-normal">Resources</span>
+          <span class="docs-normal">Optionen</span>
         </h6>
         <!-- Navigation -->
         <ul class="navbar-nav mb-md-3">
           <li class="nav-item">
-            <a class="nav-link" href="https://www.creative-tim.com/product/argon-dashboard-flask" target="_blank">
-              <i class="ni ni-palette"></i>
-              <span class="nav-link-text">Product Info</span>
+            <a class="nav-link" href="#" target="_blank">
+              <i class="ni ni-settings-gear-65"></i>
+              <span class="nav-link-text">Einstellungen</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard-flask/docs/1.0/getting-started/getting-started-flask.html" target="_blank">
+            <a class="nav-link" href="#" target="_blank">
               <i class="ni ni-spaceship"></i>
               <span class="nav-link-text">Docs</span>
             </a>
@@ -84,9 +106,9 @@
           <li class="nav-item">
             <a class="nav-link active active-pro" 
                target="_blank" 
-               href="https://www.creative-tim.com/templates/flask">
+               href="#">
               <i class="ni ni-send text-dark"></i>
-              <span class="nav-link-text">More Starters</span>
+              <span class="nav-link-text">Mehr von uns.</span>
             </a>
           </li>
         </ul>
